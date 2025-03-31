@@ -2,7 +2,7 @@
 Data and code for the Probabilistic Analysis of GB Fuzzing
 
 ## Data
-The data folder contains for various benchmarks indicated by their file names. This data contains information for each new program feature (edge coverage in libFuzzer) discovery. An example and the format is as follows:
+The data folder contains for various benchmarks indicated by their file names. This data contains information for each new libFuzzer discovery. An example and the format is as follows:
 
 ```
 1901, 4
@@ -20,3 +20,7 @@ The data folder contains for various benchmarks indicated by their file names. T
 - Line 2: each value indicates number of times other seeds apart from the one above was fuzzed for without discovering anything after the previous discovery
 - Line 3: number of features (coverage elements) discovered in this discovery
 - Line 4: Mean Local Laplace estimate for number of trials required for next discovery
+- Line 5: Mean Local Good-Turing estimate for number of trials required for next discovery
+- Line 6: Maximum value of trials of forked attempts (10) for a new discovery
+- Line 7: Average value of trials of forked attempts (10) for a new discovery
+- Line 8: Rate of execution of the fuzzer in inputs per second at that point in time
